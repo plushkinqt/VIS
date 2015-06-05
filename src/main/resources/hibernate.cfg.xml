@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">-->
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/VIS</property>
+    <property name="hibernate.connection.username">root</property>
+    
+      <property name="hibernate.connection.pool_size">1</property>
+      <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="show_sql">true</property>
+    <!-- <property key="hibernate.cache.use_second_level_cache">true</property>
+    <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+    <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory</property> -->
+    <!-- <property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property> -->
+    <mapping class="com.eficode.vis.model.User"/>
+    <mapping class="com.eficode.vis.model.UserRole"/>
+    <mapping class="com.eficode.vis.model.UserPermission"/>
+    <mapping class="com.eficode.vis.model.Server"/>
+    <mapping class="com.eficode.vis.model.ServerType"/>
+    <mapping class="com.eficode.vis.model.ServerStatus"/>
+    <mapping class="com.eficode.vis.model.ServerRole"/>
+    <mapping class="com.eficode.vis.model.ServerPermission"/>
+    <mapping class="com.eficode.vis.model.UsersToServers"/>
+    <mapping class="com.eficode.vis.model.UserRoleToPermissions"/> 
+    <mapping class="com.eficode.vis.model.ServerRolesToServerPermissions"/>
+  </session-factory>
+</hibernate-configuration>
