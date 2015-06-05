@@ -1,2 +1,2 @@
 # VIS
-Web back-end part of project
+Back-end part of web based application for distributed management of virtual machines.
